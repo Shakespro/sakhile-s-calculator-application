@@ -12,7 +12,8 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  padding-top: 25px;
+  padding-top: 115px;
+ 
 }
 
 #calculator {
@@ -90,6 +91,8 @@ button:active {
   grid-area: display;
   padding-top: 120px;
 }
+
+
 
 #divide {
   grid-area: divide;
@@ -181,7 +184,155 @@ h1 {
   color: var(--yellow);
 }
 
+/*Mobile responsiveness*/
+@media (max-width: 767px) {
+  #calculator {
+    grid-template-areas:
+      "display display display display"
+      "clear negative percentage divide"
+      "seven eight nine multiply"
+      "four five six subtract"
+      "one two three add"
+      "zero zero decimal equals";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        padding: 20px;
+        margin-top: 0px;
+        border-radius: 10px;
+        background-color: var(--black);
+      }
 
+  button {
+    height: 80px;
+    font-size: 20px;
+  }
+
+  #answer {
+    font-size: 40px;
+    padding-top: 40px;
+  }
+
+  #expression {
+    font-size: 80px;
+    padding-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 30px;
+    padding-top: 0px;
+  }
+
+  #inWords {
+    font-size: 20px;
+  }
+
+  #calculator {
+    padding: 20px;
+  }
+
+  #display {
+    padding-top: 0px;
+  }
+
+  #answer {
+    padding-top: 0px;
+  }
+
+  #expression {
+    padding-bottom: 30px;
+  }
+
+  #clear {
+    padding: 30px;
+  }
+
+  #negative {
+    padding: 10px;
+  }
+
+  #percentage {
+    padding: 10px;
+  }
+
+  #divide {
+    padding: 10px;
+  }
+
+  #multiply {
+    padding: 10px;
+  }
+
+  #subtract {
+    padding: 10px;
+  }
+
+  #add {
+    padding: 10px;
+  }
+
+  #equals {
+    padding: 10px;
+  }
+
+  #decimal {
+    padding: 10px;
+  }
+
+  #zero {
+    padding: 10px;
+  }
+
+  #one {
+    padding: 10px;
+  }
+
+  #two {
+    padding: 10px;
+  }
+
+  #three {
+    padding: 10px;
+  }
+
+  #four {
+    padding: 10px;
+  }
+
+  #five {
+    padding: 10px;
+  }
+
+  #six {
+    padding: 10px;
+  }
+
+  #seven {
+    padding: 10px;
+  }
+
+  #eight {
+    padding: 10px;
+  }
+
+  #nine {
+    padding: 10px;
+  }
+
+  .container {
+    height: auto;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .container {
+    margin-top: -180px;
+  }
+}
 
 
 
