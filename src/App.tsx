@@ -10,11 +10,11 @@ function App() {
   
   const MAX_DIGITS = 10; // Maximum digits per number in the expression
   
-  const isOperator = (symbol) => {
+  const isOperator = (symbol: string) => {
     return /[*/+-]/.test(symbol);
   };
 
-  const buttonPress = (symbol) => {
+  const buttonPress = (symbol: string) => {
     if (error) {
       resetCalculator(); // Reset if there is an error
     }
@@ -43,7 +43,7 @@ function App() {
       setExpression(expression + symbol);
     } else {
       const lastNumber = expression.split(/[-+*/]/g).pop();
-      if (lastNumber.replace(/[^0-9]/g, '').length >= MAX_DIGITS) return;
+      if (lastNumber && lastNumber.replace(/[^0-9]/g, '').length >= MAX_DIGITS) return;
 
       if (expression.charAt(0) === "0") {
         setExpression(expression.slice(1) + symbol);
@@ -85,7 +85,7 @@ function App() {
     }
   };
 
-  const numberToWordsString = (answer) => {
+  const numberToWordsString = (answer: number) => {
     try {
       return numberToWords.toWords(answer);
     } catch (error) {
